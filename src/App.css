@@ -1,0 +1,23 @@
+/* App.css */
+body {
+    background-color: #1e1e1e; /* Dark background */
+    color: #f0f0f0; /* Light text color */
+    font-family: 'Arial', sans-serif; /* Choose a suitable font */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Add a global style for button */
+  button{
+      padding: 1rem;
+      border-radius: 10px;
+      background-color: #4CAF50; /* Green */
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+  button:hover{
+      background-color: #367c39;
+  }
+  
