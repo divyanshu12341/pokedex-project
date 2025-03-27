@@ -15,6 +15,7 @@ function PokemonDetails(){
             name:response.data.name,
             id:response.data.id,
             image:response.data.sprites['front_default'],
+            abilities:response.data.abilities.map((ability)=>ability.ability.name)
         })
         setIsLoading(false);
     }
@@ -36,6 +37,15 @@ function PokemonDetails(){
                     <div className="pokemon-details-prop">
                         <h1 className="pokemon-details-name">{pokemon.name}</h1>
                         <img src={pokemon.image} alt="Pokemon image" className="pokemon-details-image"/>
+                        
+                        <div className="pokemon-details-abilities">
+                            <p>Abilities</p>
+                            <ul>
+                                {pokemon.abilities.map((ability)=>(
+                                    <li key={ability}>{ability}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </>
             ) : (

@@ -1,181 +1,201 @@
 /* PokemonDetails.css */
 
 .pokemon-details-wrapper {
-    background-color: #282c34; /* Darker background */
-    color: #e0e0e0; /* Softer text color */
-    font-family: 'Arial', sans-serif; /* Professional font */
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Deeper shadow */
-    max-width: 900px;
-    width: 95%;
-    margin: 2rem auto;
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .pokemon-details-wrapper:hover {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
-  }
-  
-  .pokemon-details-heading {
-    display: none; /* Hide the heading */
-  }
-  
-  .pokemon-details-prop {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-  
+  background-color: #282c34; /* Darker background */
+  color: #e0e0e0; /* Softer text color */
+  font-family: 'Arial', sans-serif; /* Professional font */
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Deeper shadow */
+  max-width: 900px;
+  width: 95%;
+  margin: 2rem auto;
+  transition: box-shadow 0.3s ease;
+}
+
+.pokemon-details-wrapper:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+.pokemon-details-heading {
+  display: none; /* Hide the heading */
+}
+
+.pokemon-details-prop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.pokemon-details-name {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #fdd835; /* Brighter yellow */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+  margin-bottom: 0.5rem;
+}
+
+.pokemon-details-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pokemon-details-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.6);
+}
+
+.pokemon-details-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.pokemon-details-info-item {
+  background-color: #333;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  min-width: 120px;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.pokemon-details-info-item strong {
+  color: #fdd835;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.pokemon-details-stats-container {
+  margin-bottom: 2.5rem;
+}
+
+.pokemon-details-stats-container h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.pokemon-details-stat-bar {
+  background-color: #333;
+  height: 24px;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon-details-stat-bar-inner {
+  height: 100%;
+  border-radius: 12px;
+  transition: width 0.5s ease;
+}
+
+.pokemon-details-stat-bar-inner.hp {
+  background-color: #ff6666; /* Lighter red */
+}
+
+.pokemon-details-stat-bar-inner.attack {
+  background-color: #ffb347; /* Lighter orange */
+}
+
+.pokemon-details-stat-bar-inner.defense {
+  background-color: #66b3ff; /* Lighter blue */
+}
+
+.pokemon-details-stat-bar-inner.special-attack {
+  background-color: #cc80ff; /* Lighter purple */
+}
+
+.pokemon-details-stat-bar-inner.special-defense {
+  background-color: #80ccff; /* Lighter light blue */
+}
+
+.pokemon-details-stat-bar-inner.speed {
+  background-color: #ffff80; /* Lighter yellow */
+}
+
+.pokemon-details-stat-name {
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.pokemon-details-types {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.pokemon-details-type {
+  background-color: #333;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.pokemon-details-type p {
+  font-weight: inherit;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .pokemon-details-name {
-    font-size: 3rem;
-    font-weight: 700;
-    text-transform: capitalize;
-    color: #fdd835; /* Brighter yellow */
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
   }
-  
+
   .pokemon-details-image {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: contain;
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+    height: 200px;
   }
-  
-  .pokemon-details-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 576px) {
+  .pokemon-details-name {
+    font-size: 2rem;
   }
-  
-  .pokemon-details-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
-  }
-  
-  .pokemon-details-info-item {
-    background-color: #333;
-    padding: 1rem 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    min-width: 120px;
-    flex-grow: 1;
-    text-align: left;
-  }
-  
-  .pokemon-details-info-item strong {
-    color: #fdd835;
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  .pokemon-details-stats-container {
-    margin-bottom: 2.5rem;
-  }
-  
-  .pokemon-details-stats-container h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  
-  .pokemon-details-stat-bar {
-    background-color: #333;
-    height: 24px;
-    border-radius: 12px;
-    margin-bottom: 0.8rem;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  
-  .pokemon-details-stat-bar-inner {
-    height: 100%;
-    border-radius: 12px;
-    transition: width 0.5s ease;
-  }
-  
-  .pokemon-details-stat-bar-inner.hp {
-    background-color: #ff6666; /* Lighter red */
-  }
-  
-  .pokemon-details-stat-bar-inner.attack {
-    background-color: #ffb347; /* Lighter orange */
-  }
-  
-  .pokemon-details-stat-bar-inner.defense {
-    background-color: #66b3ff; /* Lighter blue */
-  }
-  
-  .pokemon-details-stat-bar-inner.special-attack {
-    background-color: #cc80ff; /* Lighter purple */
-  }
-  
-  .pokemon-details-stat-bar-inner.special-defense {
-    background-color: #80ccff; /* Lighter light blue */
-  }
-  
-  .pokemon-details-stat-bar-inner.speed {
-    background-color: #ffff80; /* Lighter yellow */
-  }
-  
-  .pokemon-details-stat-name {
-    margin-bottom: 0.3rem;
-    font-weight: 500;
-    text-transform: capitalize;
-  }
-  
-  .pokemon-details-types {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-  }
-  
-  .pokemon-details-type {
-    background-color: #333;
-    padding: 0.7rem 1.2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    text-transform: capitalize;
-    font-weight: 500;
-  }
-  
-  .pokemon-details-type p {
-    font-weight: inherit;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .pokemon-details-name {
-      font-size: 2.5rem;
-    }
-  
-    .pokemon-details-image {
-      width: 200px;
-      height: 200px;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .pokemon-details-name {
-      font-size: 2rem;
-    }
-  
-    .pokemon-details-image {
-      width: 150px;
-      height: 150px;
-    }
-  
-    .pokemon-details-info-item {
-      min-width: 100%;
-    }
-  }
-  
+}
+
+.pokemon-details-abilities {
+  background: linear-gradient(to right, #4c669f, #3b5998, #192f6a);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.pokemon-details-abilities p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.pokemon-details-abilities ul {
+  list-style: none;
+  padding: 0;
+}
+.pokemon-details-abilities li {
+  background-color: white;
+  color: rgb(165, 87, 87);
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  border-radius: 10%;
+}
